@@ -1425,10 +1425,13 @@ const survey = new Survey.Model(surveyJson);
                 dataType: 'json',
                 processData: false,
                 success: function (data) { 
-                    alert("Success! Your Ammunition request has been submitted."); 
+                   // alert("Success! Your Ammunition request has been submitted."); 
                 },
                 error: function (xhr, status, error) {
-                    alert("Request Sent.");
+                   // alert("Request Sent.");
+                  console.log("Error details: ", error);
+                  console.log("Status: ", status);
+                  console.log("XHR Response: ", xhr);
                 }
             });
         }
@@ -1436,3 +1439,4 @@ const survey = new Survey.Model(surveyJson);
 </body>
 
 </html>
+
