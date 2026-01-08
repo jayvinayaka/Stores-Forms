@@ -1283,11 +1283,29 @@
                                               "name": "Collection/Delivery?", 
                                               "title": "Collect from SCC Stores?" 
                                             },
+                                            {
+                                               "type": "text",
+                                               "name": "collectfrom",
+                                               "visibleIf": "{Collection/Delivery?} = true",
+                                               "title": "Collect from"
+                                            },
                                             { "type": "text", 
                                               "name": "Collectiondatetime", 
                                               "visibleIf": "{Collection/Delivery?} = true",
                                               "title": "Specify the date & time of Collection", 
                                               "inputType": "datetime-local" 
+                                            },
+                                            {
+                                              "type": "text",
+                                              "name": "personcollecting",
+                                              "visibleIf": "{Collection/Delivery?} = true",
+                                              "title": "Person Collecting"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "name": "collectormobile",
+                                              "visibleIf": "{Collection/Delivery?} = true",
+                                              "title": "Civilian Mobile number"
                                             },
                                             { "type": "text", 
                                               "name": "name recipient", 
@@ -1455,6 +1473,7 @@
 </body>
 
 </html>
+
 
 
 
