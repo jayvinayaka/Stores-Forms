@@ -1209,7 +1209,7 @@
                             {
                                 "type": "panel",
                                 "name": "panel5",
-                                "title": "Specify the number of boxes to order (each box contains 10 units).",
+                                "title": "Specify the number of boxes to order (each box contains 10 ration packs).",
                                 "elements": [
                                     { "type": "text", 
                                       "name": "Standard", 
@@ -1289,17 +1289,11 @@
                                     {
                                         "type": "panel",
                                         "name": "panel3",
-                                        "title": "Delivery or Collection?",
+                                        "title": "Collection Details",
                                         "elements": [
-                                            { "type": "boolean", 
-                                              "name": "Collection/Delivery?", 
-                                              "title": "Collect from SCC Stores?" 
-                                            },
-                                            {
-                                               "type": "text",
-                                               "name": "collectfrom",
-                                               "visibleIf": "{Collection/Delivery?} = true",
-                                               "title": "Collect from"
+                                            { "type": "text", 
+                                              "name": "collectfrom", 
+                                              "title": "Provide the name of the MOD Site or Establishment where the order will be collected" 
                                             },
                                             { "type": "text", 
                                               "name": "Collectiondatetime", 
@@ -1486,6 +1480,7 @@
 </body>
 
 </html>
+
 
 
 
