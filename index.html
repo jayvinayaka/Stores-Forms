@@ -1293,19 +1293,25 @@
                                         "elements": [
                                             { "type": "text", 
                                               "name": "collectfrom", 
-                                              "title": "Provide the name of the MOD Site or Establishment where the order will be collected" 
+                                              "title": "Provide the name of the MOD Site or Establishment where the order will be collected",
+                                              "maxLength": 0
                                             },
                                             { "type": "text", 
                                               "name": "Collectiondatetime", 
-                                              "visibleIf": "{Collection/Delivery?} = true",
                                               "title": "Specify the date & time of Collection", 
                                               "inputType": "datetime-local" 
                                             },
                                             {
                                               "type": "text",
                                               "name": "personcollecting",
-                                              "visibleIf": "{Collection/Delivery?} = true",
-                                              "title": "Person Collecting"
+                                              "title": "Person Collecting",
+                                              "maxLength": 0
+                                            },
+                                            {
+                                              "type": "text",
+                                              "name": "collectoremail",
+                                              "title": "Email address of the person collecting",
+                                            "maxLength": 0
                                             },
                                             {
                                               "type": "text",
@@ -1480,6 +1486,7 @@
 </body>
 
 </html>
+
 
 
 
