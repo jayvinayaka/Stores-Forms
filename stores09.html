@@ -1330,12 +1330,14 @@ const unitsData = [
           "elements": [
             {
               "type": "text",
-              "name": "coursecode"
+              "name": "coursecode",
+              "title": "Wm Course code"
             },
             {
               "type": "text",
               "name": "coursename",
-              "startWithNewLine": false
+              "startWithNewLine": false,
+              "title": "Course Name"
             },
             {
               "type": "text",
@@ -1357,6 +1359,7 @@ const unitsData = [
               "startWithNewLine": false,
               "title": "Course duration",
               "setValueExpression": "dateDiff({start date},{end date}, 'days') + 1",
+              "readOnly": true,
               "inputType": "number"
             },
             {
@@ -1485,6 +1488,7 @@ const survey = new Survey.Model(surveyJson);
 </body>
 
 </html>
+
 
 
 
