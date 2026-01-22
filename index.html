@@ -1311,44 +1311,20 @@
                                               "type": "text",
                                               "name": "collectoremail",
                                               "title": "Email address of the person collecting",
-                                            "maxLength": 0
+                                              "maxLength": 0
                                             },
                                             {
                                               "type": "text",
                                               "name": "collectormobile",
-                                              "visibleIf": "{Collection/Delivery?} = true",
-                                              "title": "Civilian Mobile number"
-                                            },
-                                            { "type": "text", 
-                                              "name": "name recipient", 
-                                              "visibleIf": "{Collection/Delivery?} = false", 
-                                              "title": "Recipient Name" 
-                                            },
-                                            { "type": "text", 
-                                              "name": "mobile", 
-                                              "visibleIf": "{Collection/Delivery?} = false", 
-                                              "startWithNewLine": false, 
-                                              "title": "Mobile number", 
-                                              "inputType": "tel" 
-                                            },
-                                            { "type": "text", 
-                                              "name": "email", 
-                                              "visibleIf": "{Collection/Delivery?} = false", 
-                                              "startWithNewLine": false, 
-                                              "title": "Email address", 
-                                              "inputType": "email" 
-                                            },
-                                            { "type": "text", 
-                                              "name": "Address to delivery", 
-                                              "visibleIf": "{Collection/Delivery?} = false", 
-                                              "title": "Delivery Address" 
+                                              "title": "Civilian Mobile number",
+                                              "maxLength": 0
                                             }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
+                                          ]
+                                         }
+                                       ]
+                                     }
+                                   ]
+                                 },
                     {
                         "name": "page2",
                         "elements": [
@@ -1388,6 +1364,17 @@
                                       "isRequired": true, 
                                       "inputType": "date" 
                                     },
+                                    {
+                                      "type": "text",
+                                      "name": "duration",
+                                      "minWidth": "250px",
+                                      "maxWidth": "75%",
+                                      "startWithNewLine": false,
+                                      "title": "Course Duration",
+                                      "setValueExpression": "dateDiff({start date},{end date}, \"days\") +1",
+                                      "readOnly": true,
+                                      "inputType": "number"
+                                    },
                                     { "type": "text", 
                                       "name": "CFAVs", 
                                       "maxWidth": "70%",
@@ -1407,7 +1394,8 @@
                                       "startWithNewLine": false, 
                                       "title": "Total", 
                                       "setValueExpression": "{CFAVs}+{cadets}", 
-                                      "readOnly": true },
+                                      "readOnly": true 
+                                    },
                                     {
                                         "type": "panel",
                                         "name": "panel6",
@@ -1486,6 +1474,7 @@
 </body>
 
 </html>
+
 
 
 
