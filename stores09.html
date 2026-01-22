@@ -1180,7 +1180,7 @@ const unitsData = [
         {
           "type": "text",
           "name": "reason",
-          "title": "Reason"
+          "title": "Reason for Request"
         },
         {
           "type": "panel",
@@ -1250,94 +1250,123 @@ const unitsData = [
             {
               "type": "panel",
               "name": "panel3",
-              "title": "Delivery or Collection?",
+              "title": "Collection Details",
               "elements": [
-                {
-                  "type": "boolean",
-                  "name": "Collection/Delivery?",
-                  "title": "Collect from SCC Stores?"
-                },
-                {
+                  {
                   "type": "text",
-                  "name": "collectfrom",
-                  "visibleIf": "{Collection/Delivery?} = true",
-                  "title": "Collect from"
-                },
-                {
+                  "name": "modsitename",
+                  "title": "Provide the name of the MOD Site or Establishment where the order will be collected"
+                  },
+                  {
                   "type": "text",
                   "name": "Collectiondatetime",
-                  "visibleIf": "{Collection/Delivery?} = true",
                   "title": "Specify the date & time of Collection",
                   "inputType": "datetime-local"
                 },
                 {
                   "type": "text",
                   "name": "personcollecting",
-                  "visibleIf": "{Collection/Delivery?} = true",
                   "title": "Person Collecting"
                 },
                 {
                   "type": "text",
+                  "name": "collectoremail",
+                  "title": "Email address of the person collecting"
+                },
+                {
+                  "type": "text",
                   "name": "collectormobile",
-                  "visibleIf": "{Collection/Delivery?} = true",
                   "title": "Civilian Mobile number",
                   "inputType": "number"
                 },
                 {
                   "type": "html",
                   "name": "question5",
-                  "html": "Note: Collection & Escort Vehicle and Personal Details are to be arranged with the collecting depot:"
-                },
-                {
-                  "type": "text",
-                  "name": "recipientname",
-                  "visibleIf": "{Collection/Delivery?} = false",
-                  "title": "Recipient Name"
-                },
-                {
-                  "type": "text",
-                  "name": "recipientmobile",
-                  "visibleIf": "{Collection/Delivery?} = false",
-                  "startWithNewLine": false,
-                  "title": "Mobile number",
-                  "inputType": "tel"
-                },
-                {
-                  "type": "text",
-                  "name": "recipientemail",
-                  "visibleIf": "{Collection/Delivery?} = false",
-                  "startWithNewLine": false,
-                  "title": "Email address",
-                  "inputType": "email"
-                },
-                {
-                  "type": "text",
-                  "name": "deliveryaddress",
-                  "visibleIf": "{Collection/Delivery?} = false",
-                  "title": "Delivery Address"
+                  "html": "Note: Collection & Escort Vehicle and Personal Details are to be arranged with the collecting depot.\nPersonnel collecting munitions are to have completed the Dangerous Goods Awareness Training for moving munitions on the public road."
                 },
                 {
                   "type": "text",
                   "name": "deliverydatetime",
-                  "visibleIf": "{Collection/Delivery?} = false",
+                  "minWidth": "400px",
                   "title": "Preferred Date & Time for delivery",
                   "inputType": "datetime-local"
                 },
                 {
                   "type": "text",
                   "name": "deliveryrestrictions",
-                  "visibleIf": "{Collection/Delivery?} = false",
                   "title": "Any restrictions or note for delivery"
                 },
                 {
                   "type": "text",
                   "name": "deliverypoc",
-                  "visibleIf": "{Collection/Delivery?} = false",
                   "title": "Delivery Location poc confirmed acceptance of Munitions & Delivery Date / Time: \n",
                   "inputType": "datetime-local"
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+            {
+            "name": "page2",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "panel4",
+          "title": "Westminster Information",
+          "elements": [
+            {
+              "type": "text",
+              "name": "coursecode"
             },
+            {
+              "type": "text",
+              "name": "coursename",
+              "startWithNewLine": false
+            },
+            {
+              "type": "text",
+              "name": "start date",
+              "startWithNewLine": false,
+              "title": "Course start date",
+              "inputType": "date"
+            },
+            {
+              "type": "text",
+              "name": "end date",
+              "startWithNewLine": false,
+              "title": "Course end date",
+              "inputType": "date"
+            },
+            {
+              "type": "text",
+              "name": "duration",
+              "startWithNewLine": false,
+              "title": "Course duration",
+              "setValueExpression": "dateDiff({start date},{end date}, 'days') + 1",
+              "inputType": "number"
+            },
+            {
+              "type": "text",
+              "name": "CFAVs",
+              "title": "Number of CFAVs"
+            },
+            {
+              "type": "text",
+              "name": "cadets",
+              "startWithNewLine": false,
+              "title": "Number of Cadets"
+            },
+            {
+              "type": "text",
+              "name": "Total",
+              "startWithNewLine": false,
+              "title": "Total Number of Personnel",
+              "setValueExpression": "{CFAVs}+{cadets}",
+              "readOnly": true,
+              "maxLength": 0
+            },    
             {
               "type": "panel",
               "name": "panel1",
@@ -1444,5 +1473,6 @@ const survey = new Survey.Model(surveyJson);
 </body>
 
 </html>
+
 
 
