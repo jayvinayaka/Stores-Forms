@@ -1331,17 +1331,23 @@ const unitsData = [
             {
               "type": "text",
               "name": "coursecode",
+              "minWidth": "250px",
+              "maxWidth": "75%",
               "title": "Wm Course code"
             },
             {
               "type": "text",
               "name": "coursename",
+              "minWidth": "250px",
+              "maxWidth": "75%",
               "startWithNewLine": false,
               "title": "Course Name"
             },
             {
               "type": "text",
               "name": "start date",
+              "minWidth": "250px",
+              "maxWidth": "75%",
               "startWithNewLine": false,
               "title": "Course start date",
               "inputType": "date"
@@ -1349,6 +1355,8 @@ const unitsData = [
             {
               "type": "text",
               "name": "end date",
+              "minWidth": "250px",
+              "maxWidth": "75%",
               "startWithNewLine": false,
               "title": "Course end date",
               "inputType": "date"
@@ -1356,6 +1364,8 @@ const unitsData = [
             {
               "type": "text",
               "name": "duration",
+              "minWidth": "250px",
+              "maxWidth": "75%",
               "startWithNewLine": false,
               "title": "Course duration",
               "setValueExpression": "dateDiff({start date},{end date}, 'days') + 1",
@@ -1488,6 +1498,7 @@ const survey = new Survey.Model(surveyJson);
 </body>
 
 </html>
+
 
 
 
