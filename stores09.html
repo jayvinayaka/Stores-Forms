@@ -1477,6 +1477,10 @@ const survey = new Survey.Model(surveyJson);
         function sendData(survey) {
             const flowUrl = "https://default98804ab5274143968bcf8849c3ff04.be.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/06cf125343ce49f09419677acbe27a5b/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=H-tQiowlL23b08hktsSt1-dOfcMlWM7M2TCCpITQk14";
 
+            // --- ADD THESE TWO LINES HERE ---
+    const submissionDate = new Date().toISOString(); // Gets current date/time
+    survey.setValue("submissionDate", submissionDate); // Adds it to the form data
+    // --------------------------------
             $.ajax({
                 url: flowUrl,
                 type: 'POST',
@@ -1499,6 +1503,7 @@ const survey = new Survey.Model(surveyJson);
 </body>
 
 </html>
+
 
 
 
