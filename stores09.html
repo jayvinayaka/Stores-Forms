@@ -1205,7 +1205,7 @@ const unitsData = [
               "name": "round0.22",
               "minWidth": "100px",
               "maxWidth": "70%",
-              "title": "Round 0.22 LR Club\r\nPPQ 3500\r\n Quantity Required: \r\n",
+              "title": "Round 0.22 LR Club\r\nPPQ\r\n Quantity Required: \r\n",
               "inputType": "number",
               "min": 0,
               "max": 20
@@ -1216,10 +1216,10 @@ const unitsData = [
               "minWidth": "100px",
               "maxWidth": "70%",
               "startWithNewLine": false,
-              "title": "Round 5.56mm Ball \r\nPPQ 900\r\nQuantity Required: \r\n",
+              "title": "Round 5.56mm Ball \r\nPPQ\r\nQuantity Required: \r\n",
               "inputType": "number",
               "min": 0,
-              "max": 20
+              "max": 50
             },
             {
               "type": "text",
@@ -1227,10 +1227,10 @@ const unitsData = [
               "minWidth": "100px",
               "maxWidth": "70%",
               "startWithNewLine": false,
-              "title": "Cartridge 5.56mm Blank\r\nPPQ 900\r\nQuantity Required: \r\n",
+              "title": "Cartridge 5.56mm Blank\r\nPPQ\r\nQuantity Required: \r\n",
               "inputType": "number",
               "min": 0,
-              "max": 20
+              "max": 50
             },
             {
               "type": "text",
@@ -1238,7 +1238,7 @@ const unitsData = [
               "minWidth": "100px",
               "maxWidth": "70%",
               "startWithNewLine": false,
-              "title": "Grenade Hand Smoke\r\nPPQ 12\r\nQuantity Required: \r\n",
+              "title": "Grenade Hand Smoke\r\nPPQ\r\nQuantity Required: \r\n",
               "inputType": "number",
               "min": 0,
               "max": 20
@@ -1249,7 +1249,7 @@ const unitsData = [
               "minWidth": "100px",
               "maxWidth": "70%",
               "startWithNewLine": false,
-              "title": "Simulator Battle Sound\r\nPPQ 50\r\nQuantity Required: \r\n",
+              "title": "Simulator Battle Sound\r\nPPQ\r\nQuantity Required: \r\n",
               "inputType": "number",
               "min": 0,
               "max": 20
@@ -1263,17 +1263,17 @@ const unitsData = [
             {
               "type": "panel",
               "name": "panel3",
-              "title": "Collection Details",
+              "title": "Delivery Details",
               "elements": [
                   {
                   "type": "text",
                   "name": "modsitename",
-                  "title": "Provide the name of the MOD Site or Establishment where the order will be collected"
+                  "title": "Provide the name of the MOD Site or Establishment where the order will be delivered"
                   },
                   {
                   "type": "text",
                   "name": "Collectiondatetime",
-                  "title": "Specify the date & time of Collection",
+                  "title": "Specify the date & time of Delivery",
                   "inputType": "datetime-local"
                 },
                 {
@@ -1307,7 +1307,7 @@ const unitsData = [
                 {
                   "type": "text",
                   "name": "deliveryrestrictions",
-                  "title": "Any restrictions or note for collection"
+                  "title": "Any restrictions or note for delivery"
                 },
                 {
                   "type": "text",
@@ -1332,23 +1332,23 @@ const unitsData = [
             {
               "type": "text",
               "name": "coursecode",
-              "minWidth": "250px",
-              "maxWidth": "75%",
+              "minWidth": "200px",
+              "maxWidth": "70%",
               "title": "Wm Course code"
             },
             {
               "type": "text",
               "name": "coursename",
-              "minWidth": "250px",
-              "maxWidth": "75%",
+              "minWidth": "200px",
+              "maxWidth": "70%",
               "startWithNewLine": false,
               "title": "Course Name"
             },
             {
               "type": "text",
               "name": "start date",
-              "minWidth": "250px",
-              "maxWidth": "75%",
+              "minWidth": "200px",
+              "maxWidth": "70%",
               "startWithNewLine": false,
               "title": "Course start date",
               "inputType": "date"
@@ -1356,8 +1356,8 @@ const unitsData = [
             {
               "type": "text",
               "name": "end date",
-              "minWidth": "250px",
-              "maxWidth": "75%",
+              "minWidth": "200px",
+              "maxWidth": "70%",
               "startWithNewLine": false,
               "title": "Course end date",
               "inputType": "date"
@@ -1365,8 +1365,8 @@ const unitsData = [
             {
               "type": "text",
               "name": "duration",
-              "minWidth": "250px",
-              "maxWidth": "75%",
+              "minWidth": "200px",
+              "maxWidth": "70%",
               "startWithNewLine": false,
               "title": "Course duration",
               "setValueExpression": "dateDiff({start date},{end date}, 'days') + 1",
@@ -1422,14 +1422,14 @@ const unitsData = [
                   "type": "text",
                   "name": "requestorappt",
                   "title": "WM Appointment"
-                },
-                {
-                  "type": "text",
-                  "name": "daterequested",
-                  "title": "Date",
-                  "isRequired": true,
-                  "inputType": "date"
                 }
+              //  {
+                //  "type": "text",
+                //  "name": "daterequested",
+                //  "title": "Date",
+                //  "isRequired": true,
+                //  "inputType": "date"
+               // }
               ]
             }
           ]
@@ -1499,6 +1499,7 @@ const survey = new Survey.Model(surveyJson);
 </body>
 
 </html>
+
 
 
 
