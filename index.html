@@ -1452,6 +1452,10 @@
             // Replace with your actual Power Automate URL
             const flowUrl = "https://default98804ab5274143968bcf8849c3ff04.be.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/c7d9f1904f9143fdb4546977b85c79ab/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1x7F3GNe-_N6neEaaWZFYC4CAT-ZPM3LKjRCVPxvYB8";
 
+             // --- ADD THESE TWO LINES HERE ---
+    const submissionDate = new Date().toISOString(); // Gets current date/time
+    survey.setValue("submissionDate", submissionDate); // Adds it to the form data
+    // --------------------------------
             $.ajax({
                 url: flowUrl,
                 type: 'POST',
@@ -1474,6 +1478,7 @@
 </body>
 
 </html>
+
 
 
 
