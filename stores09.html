@@ -1164,7 +1164,7 @@ const unitsData = [
   "logoHeight": "100px",
  /* "logoPosition": "left", */
   "logoFit": "contain",
-  "completedHtml": "<h3>Thank you for completing the form</h3>",
+  "completedHtml": "<h3>Thank you for completing the form. You'll receive a copy of your submitted form by email shortly. Your form will be submitted for approval</h3>",
   "pages": [
     {
       "name": "page1",
@@ -1253,67 +1253,95 @@ const unitsData = [
               "inputType": "number",
               "min": 0,
               "max": 20
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "panel2",
-          "elements": [
+            },
             {
               "type": "panel",
               "name": "panel3",
               "title": "Delivery Details",
+              "description": "Munitions will only be ordered for delivery to a MoD authorised Ammunition Bunker / Depot, MoD DIO Training Camp, or collection from a MoD Defence Munitions Depot.\n\nDeliveries must be arranged and agreed with the delivery location before form submission and details provided below.",
               "elements": [
-                  {
+                {
                   "type": "text",
                   "name": "modsitename",
-                  "title": "Provide the name of the MOD Site or Establishment where the order will be delivered."
-                  },
-                  {
+                  "title": "Provide the name of the MOD Site or Establishment where the order will be collected"
+                },
+                {
                   "type": "text",
-                  "name": "Collectiondatetime",
-                  "title": "Specify the date & time of Delivery",
+                  "name": "Delivery address",
+                  "title": "Enter the full postal address, including Postcode"
+                },
+                {
+                  "type": "text",
+                  "name": "POCdeliveryloc",
+                  "title": "POC for delivery location:"
+                },
+                {
+                  "type": "text",
+                  "name": "nameofdeliveryrec",
+                  "title": "Name"
+                },
+                {
+                  "type": "text",
+                  "name": "deliveryrecposition",
+                  "title": "Position"
+                },
+                {
+                  "type": "text",
+                  "name": "deliveryrecmobile",
+                  "title": "Civilian Mobile number",
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "deliveryrecemail",
+                  "title": "Email address"
+                },
+                {
+                  "type": "text",
+                  "name": "Deliverydatetime",
+                  "title": "Specify the agreed date & time for Delivery",
+                  "inputType": "datetime-local"
+                },
+                {
+                  "type": "text",
+                  "name": "deliveryrestrictions",
+                  "title": "Any restrictions or note for delivery"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "Depot Collection Details",
+              "title": "Depot Collection Details",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "Depot",
+                  "html": "Note: Collection & Escort Vehicle and Personal Details are to be arranged with the collecting depot.\nPersonnel collecting munitions are to have completed the Dangerous Goods Awareness Training for moving munitions on the public road."
+                },
+                {
+                  "type": "text",
+                  "name": "Collectiondepot",
+                  "minWidth": "400px",
+                  "title": "Collection Depot",
+                  "inputType": "datetime-local"
+                },
+                {
+                  "type": "text",
+                  "name": "collectiondatetime",
+                  "minWidth": "400px",
+                  "title": "Specify the date & time of collection",
                   "inputType": "datetime-local"
                 },
                 {
                   "type": "text",
                   "name": "personcollecting",
-                  "title": "Person Collecting"
-                },
-                {
-                  "type": "text",
-                  "name": "collectoremail",
-                  "title": "Email address of the person collecting"
+                  "title": "Person Collecting\n"
                 },
                 {
                   "type": "text",
                   "name": "collectormobile",
-                  "title": "Civilian Mobile number",
-                  "inputType": "number"
-                },
-                {
-                  "type": "html",
-                  "name": "question5",
-                  "html": "Note: Collection & Escort Vehicle and Personal Details are to be arranged with the collecting depot.\nPersonnel collecting munitions are to have completed the Dangerous Goods Awareness Training for moving munitions on the public road."
-                },
-             //   {
-               //   "type": "text",
-              // "name": "deliverydatetime",
-              //    "minWidth": "400px",
-              //    "title": "Preferred Date & Time for delivery",
-               //   "inputType": "datetime-local"
-              //  },
-                {
-                  "type": "text",
-                  "name": "deliveryrestrictions",
-                  "title": "Any restrictions or note for delivery"
-                },
-                {
-                  "type": "text",
-                  "name": "deliverypoc",
-                  "title": "Collection Location poc confirmed acceptance of Munitions & Collection Date / Time: \n",
-                  "inputType": "datetime-local"
+                  "title": "Civilian mobile number\n"
                 }
               ]
             }
@@ -1503,6 +1531,7 @@ const survey = new Survey.Model(surveyJson);
 </body>
 
 </html>
+
 
 
 
