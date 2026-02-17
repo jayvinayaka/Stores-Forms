@@ -1198,14 +1198,14 @@ const unitsData = [
           "type": "panel",
           "name": "panel5",
           "title": "Munitions Required: ",
-          "description": "Munitions will only be ordered for delivery to a MOD authorised Ammunition Bunker / Depot, MOD DIO Training Camp, or for collection from a MOD Munitions Depot.\nMunition requests will only be processed to quantities remaining within the Area’s annual allocation, increases are to be arranged by ASO Shooting to NSO Shooting prior to requesting. \n\nNote – annual allocations are virtual from 01 Apr-31 Mar and do not carry over, they include physical munitions previously drawn but not expended.\nMunitions are to be requested in denominations of the item's Pre Packed Quantity (PPQ)\n",
+          "description": " Munition requests will only be processed to quantities remaining within the Area’s annual allocation,increases are to be arranged by ASO Shooting to NSO Shooting prior to requesting. \n\nNote – annual allocations are virtual from 01 Apr-31 Mar and do not carry over, they include physical munitions previously drawn but not expended.\nMunitions are to be requested in denominations of the item's Pre Packed Quantity (PPQ)\n",
           "elements": [
             {
               "type": "text",
               "name": "round0.22",
               "minWidth": "100px",
               "maxWidth": "70%",
-              "title": "Round 0.22 LR Club\r\nPPQ\r\n Quantity Required: \r\n",
+              "title": "Round 0.22 LR Club\r\nPPQ 3,500\r\n Quantity Required: \r\n",
               "inputType": "number",
               "min": 0,
               "max": 20
@@ -1216,7 +1216,7 @@ const unitsData = [
               "minWidth": "100px",
               "maxWidth": "70%",
               "startWithNewLine": false,
-              "title": "Round 5.56mm Ball \r\nPPQ\r\nQuantity Required: \r\n",
+              "title": "Round 5.56mm Ball \r\nPPQ 900\r\nQuantity Required: \r\n",
               "inputType": "number",
               "min": 0,
               "max": 50
@@ -1227,7 +1227,7 @@ const unitsData = [
               "minWidth": "100px",
               "maxWidth": "70%",
               "startWithNewLine": false,
-              "title": "Cartridge 5.56mm Blank\r\nPPQ\r\nQuantity Required: \r\n",
+              "title": "Cartridge 5.56mm Blank\r\nPPQ 900\r\nQuantity Required: \r\n",
               "inputType": "number",
               "min": 0,
               "max": 50
@@ -1238,7 +1238,7 @@ const unitsData = [
               "minWidth": "100px",
               "maxWidth": "70%",
               "startWithNewLine": false,
-              "title": "Grenade Hand Smoke\r\nPPQ\r\nQuantity Required: \r\n",
+              "title": "Grenade Hand Smoke\r\nPPQ 12\r\nQuantity Required: \r\n",
               "inputType": "number",
               "min": 0,
               "max": 20
@@ -1249,7 +1249,7 @@ const unitsData = [
               "minWidth": "100px",
               "maxWidth": "70%",
               "startWithNewLine": false,
-              "title": "Simulator Battle Sound\r\nPPQ\r\nQuantity Required: \r\n",
+              "title": "Simulator Battle Sound\r\nPPQ 50\r\nQuantity Required: \r\n",
               "inputType": "number",
               "min": 0,
               "max": 20
@@ -1268,7 +1268,7 @@ const unitsData = [
                   {
                   "type": "text",
                   "name": "modsitename",
-                  "title": "Provide the name of the MOD Site or Establishment where the order will be delivered"
+                  "title": "Provide the name of the MOD Site or Establishment where the order will be delivered."
                   },
                   {
                   "type": "text",
@@ -1503,6 +1503,7 @@ const survey = new Survey.Model(surveyJson);
 </body>
 
 </html>
+
 
 
 
