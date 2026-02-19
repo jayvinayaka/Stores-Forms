@@ -1258,17 +1258,23 @@ const unitsData = [
               "type": "panel",
               "name": "panel3",
               "title": "Delivery Details",
-              "description": "Munitions will only be ordered for delivery to a MoD authorised Ammunition Bunker / Depot, MoD DIO Training Camp, **OR** collection from a MoD Defence Munitions Depot.\n\nDeliveries must be arranged and agreed with the delivery location before form submission and details provided below.",
+              "elements": [
+                  {
+                    "type": "html",
+                    "name": "delivery_notice",
+                    "html": "Munitions will only be ordered for delivery to a MoD authorised Ammunition Bunker / Depot, MoD DIO Training Camp, <b>OR</b> collection from a MoD Defence Mu"
+                },
+              //"description": "Munitions will only be ordered for delivery to a MoD authorised Ammunition Bunker / Depot, MoD DIO Training Camp, **OR** collection from a MoD Defence Munitions Depot.\n\nDeliveries must be arranged and agreed with the delivery location before form submission and details provided below.",
               "elements": [
                 {
                   "type": "text",
                   "name": "modsitename",
-                  "title": "Provide the name of the MOD Site or Establishment where the order will be collected"
+                  "title": "Provide the name of the MOD Site or Establishment where the order will be collected."
                 },
                 {
                   "type": "text",
                   "name": "Delivery address",
-                  "title": "Enter the full postal address, including Postcode"
+                  "title": "Enter the full postal address, including Postcode."
                 },
                 {
                   "type": "text",
@@ -1535,6 +1541,7 @@ const survey = new Survey.Model(surveyJson);
 </body>
 
 </html>
+
 
 
 
