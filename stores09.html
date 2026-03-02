@@ -1192,7 +1192,8 @@ const unitsData = [
         {
           "type": "text",
           "name": "reason",
-          "title": "Reason for Request"
+          "title": "Reason for Request",
+          "isRequired": true
         },
         {
           "type": "panel",
@@ -1255,8 +1256,15 @@ const unitsData = [
               "max": 20
             },
             {
+              "type": "boolean",
+              "name": "DeliveryorCollection",
+              "title": "Is this request for delivery to a MOD Establishment?",
+              "isRequired": true
+            },
+            {
               "type": "panel",
               "name": "panel3",
+              "visibleIf": "{DeliveryorCollection} = true",
               "title": "Delivery Details",
             //  "elements": [
               //"description": "Munitions will only be ordered for delivery to a MoD authorised Ammunition Bunker / Depot, MoD DIO Training Camp, **OR** collection from a MoD Defence Munitions Depot.\n\nDeliveries must be arranged and agreed with the delivery location before form submission and details provided below.",
@@ -1269,44 +1277,52 @@ const unitsData = [
                   {
                   "type": "text",
                   "name": "modsitename",
-                  "title": "Provide the name of the MOD Site or Establishment where the order will be collected."
+                  "title": "Provide the name of the MOD Site or Establishment where the order will be delivered.",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "Delivery address",
-                  "title": "Enter the full postal address, including Postcode."
+                  "title": "Enter the full postal address, including Postcode.",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "POCdeliveryloc",
-                  "title": "POC for delivery location:"
+                  "title": "POC for delivery location:",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "nameofdeliveryrec",
-                  "title": "Name"
+                  "title": "Name",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "deliveryrecposition",
-                  "title": "Position"
+                  "title": "Position",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "deliveryrecmobile",
                   "title": "Civilian Mobile number",
-                  "inputType": "number"
+                  "inputType": "number",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "deliveryrecemail",
-                  "title": "Email address"
+                  "title": "Email address",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "Deliverydatetime",
                   "title": "Specify the agreed date & time for Delivery",
-                  "inputType": "datetime-local"
+                  "inputType": "datetime-local",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
@@ -1318,6 +1334,7 @@ const unitsData = [
             {
               "type": "panel",
               "name": "Depot Collection Details",
+              "visibleIf": "{DeliveryorCollection} = false",
               "title": "Depot Collection Details",
               "elements": [
                 {
@@ -1329,29 +1346,34 @@ const unitsData = [
                   "type": "text",
                   "name": "Collectiondepot",
                   "minWidth": "400px",
-                  "title": "Collection Depot"
+                  "title": "Collection Depot",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "collectiondatetime",
                   "minWidth": "400px",
                   "title": "Specify the date & time of collection",
-                  "inputType": "datetime-local"
+                  "inputType": "datetime-local",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "personcollecting",
-                  "title": "Person Collecting\n"
+                  "title": "Person Collecting\n",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "collectormobile",
-                  "title": "Civilian mobile number\n"
+                  "title": "Civilian mobile number\n",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "collectoremail",
-                  "title": "Email address"
+                  "title": "Email address",
+                  "isRequired": true
                 }  
               ]
             }
@@ -1372,7 +1394,8 @@ const unitsData = [
               "name": "coursecode",
               "minWidth": "200px",
               "maxWidth": "70%",
-              "title": "Wm Course code"
+              "title": "Wm Course code",
+              "isRequired": true
             },
             {
               "type": "text",
@@ -1380,7 +1403,8 @@ const unitsData = [
               "minWidth": "200px",
               "maxWidth": "70%",
               "startWithNewLine": false,
-              "title": "Course Name"
+              "title": "Course Name",
+              "isRequired": true
             },
             {
               "type": "text",
@@ -1389,7 +1413,8 @@ const unitsData = [
               "maxWidth": "70%",
               "startWithNewLine": false,
               "title": "Course start date",
-              "inputType": "date"
+              "inputType": "date",
+              "isRequired": true
             },
             {
               "type": "text",
@@ -1398,7 +1423,8 @@ const unitsData = [
               "maxWidth": "70%",
               "startWithNewLine": false,
               "title": "Course end date",
-              "inputType": "date"
+              "inputType": "date",
+              "isRequired": true
             },
             {
               "type": "text",
@@ -1414,13 +1440,15 @@ const unitsData = [
             {
               "type": "text",
               "name": "CFAVs",
-              "title": "Number of CFAVs"
+              "title": "Number of CFAVs",
+              "isRequired": true
             },
             {
               "type": "text",
               "name": "cadets",
               "startWithNewLine": false,
-              "title": "Number of Cadets"
+              "title": "Number of Cadets",
+              "isRequired": true
             },
             {
               "type": "text",
@@ -1439,12 +1467,14 @@ const unitsData = [
                 {
                   "type": "text",
                   "name": "Requestorname",
-                  "title": "Requestor Name"
+                  "title": "Requestor Name",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "requestoremail",
-                  "title": "Email"
+                  "title": "Email",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
@@ -1454,12 +1484,14 @@ const unitsData = [
                 {
                   "type": "text",
                   "name": "requestorWMPIN",
-                  "title": "WM PNumber"
+                  "title": "WM PNumber",
+                  "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "requestorappt",
-                  "title": "WM Appointment"
+                  "title": "WM Appointment",
+                  "isRequired": true
                 }
               //  {
                 //  "type": "text",
@@ -1541,6 +1573,7 @@ const survey = new Survey.Model(surveyJson);
 </body>
 
 </html>
+
 
 
 
