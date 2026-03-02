@@ -1169,7 +1169,7 @@
                 "logoHeight": "100px",
                 "logoPosition": "left", // Force logo LEFT in JSON
                 "logoFit": "contain",
-                "completedHtml": "<h3>Thank you for completing the form</h3>",
+                "completedHtml": "<h3>Thank you for completing the form.You'll receive a copy of your submitted form by email shortly. Your form will be submitted for approval.</h3>",
                 "pages": [
                     {
                         "name": "page1",
@@ -1284,6 +1284,7 @@
                                     },
                                     { "type": "comment", 
                                       "name": "Reason", 
+                                      "isRequired": true,
                                       "title": "Reason for request" 
                                     },
                                     {
@@ -1293,30 +1294,35 @@
                                         "elements": [
                                             { "type": "text", 
                                               "name": "collectfrom", 
+                                              "isRequired": true,
                                               "title": "Provide the name of the MOD Site or Establishment where the order will be collected",
                                               "maxLength": 0
                                             },
                                             { "type": "text", 
                                               "name": "Collectiondatetime", 
                                               "title": "Specify the date & time of Collection", 
+                                              "isRequired": true,
                                               "inputType": "datetime-local" 
                                             },
                                             {
                                               "type": "text",
                                               "name": "personcollecting",
                                               "title": "Person Collecting",
+                                              "isRequired": true,
                                               "maxLength": 0
                                             },
                                             {
                                               "type": "text",
                                               "name": "collectoremail",
                                               "title": "Email address of the person collecting",
+                                              "isRequired": true,
                                               "maxLength": 0
                                             },
                                             {
                                               "type": "text",
                                               "name": "collectormobile",
                                               "title": "Civilian Mobile number",
+                                              "isRequired": true,
                                               "maxLength": 0
                                             }
                                           ]
@@ -1337,14 +1343,16 @@
                                       "name": "code", 
                                       "minWidth": "200px", 
                                       "maxWidth": "70%", 
-                                      "title": "WM Course code" 
+                                      "title": "WM Course code",
+                                      "isRequired": true
                                     },
                                     { "type": "text", 
                                       "name": "Course name", 
                                       "minWidth": "200px", 
                                       "maxWidth": "70%", 
                                       "startWithNewLine": false, 
-                                      "title": "Course Name" 
+                                      "title": "Course Name",
+                                      "isRequired": true
                                     },
                                     { "type": "text", 
                                       "name": "start date", 
@@ -1379,6 +1387,7 @@
                                       "name": "CFAVs", 
                                       "maxWidth": "70%",
                                       "title": "Number of CFAVs", 
+                                      "isRequired": true,
                                       "inputType": "number" 
                                     },
                                     { "type": "text", 
@@ -1386,6 +1395,7 @@
                                       "maxWidth": "70%",
                                       "startWithNewLine": false, 
                                       "title": "Number of Cadets", 
+                                      "isRequired": true,
                                       "inputType": "number" 
                                     },
                                     { "type": "text", 
@@ -1401,11 +1411,11 @@
                                         "name": "panel6",
                                         "title": "Request from",
                                         "elements": [
-                                            { "type": "text", "name": "requestor", "title": "Requestor name" },
-                                            { "type": "text", "name": "requestoremail", "title": "Email" },
-                                            { "type": "text", "name": "rank", "title": "Rank" },
-                                            { "type": "text", "name": "WMPIN", "title": "WM PNumber" },
-                                            { "type": "text", "name": "appointment", "title": "WM Appointment" }
+                                            { "type": "text", "name": "requestor", "title": "Requestor name", "isRequired": true },
+                                            { "type": "text", "name": "requestoremail", "isRequired": true, "title": "Email" },
+                                            { "type": "text", "name": "rank", "isRequired": true, "title": "Rank" },
+                                            { "type": "text", "name": "WMPIN", "isRequired": true, "title": "WM PNumber" },
+                                            { "type": "text", "name": "appointment", "isRequired": true, "title": "WM Appointment" }
                                            // { "type": "text", "name": "daterequested", "title": "Date", "isRequired": true, "inputType": "date" }
                                         ]
                                     }
@@ -1478,6 +1488,7 @@
 </body>
 
 </html>
+
 
 
 
